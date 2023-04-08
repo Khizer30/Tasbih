@@ -1,0 +1,29 @@
+{
+  "expo":
+  {
+    "name": "Tasbih",
+    "slug": "Tasbih",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "splash":
+    {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#34495E"
+    },
+    "assetBundlePatterns":
+    [
+      "**/*"
+    ],
+    "android":
+    {
+      "adaptiveIcon":
+      {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#34495E"
+      }
+    }
+  }
+}

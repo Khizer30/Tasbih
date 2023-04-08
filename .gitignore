@@ -1,0 +1,5 @@
+Extras
+node_modules
+dist
+.expo
+.metro-health-check*
