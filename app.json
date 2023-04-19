@@ -11,7 +11,7 @@
     {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#34495E"
+      "backgroundColor": "#FFFFCC"
     },
     "assetBundlePatterns":
     [
@@ -22,7 +22,7 @@
       "adaptiveIcon":
       {
         "foregroundImage": "./assets/logo.png",
-        "backgroundColor": "#34495E"
+        "backgroundColor": "#006400"
       }
     }
   }
