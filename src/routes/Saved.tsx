@@ -1,18 +1,20 @@
 import { ScrollView, View, Image, Text, Pressable, StyleSheet } from "react-native";
 // ...
-import { logo, back, dhikrs } from "../lib/Images";
+import { logo, back, type Dhikr } from "../lib/Images";
 import DhikrLink from "../lib/DhikrLink";
-import { type Dhikr, MenuScreenNavigationProp } from "../lib/Interface";
+import { type SavedScreenNavigationProp } from "../lib/Interface";
 
 // Props
 interface Props
 {
-  navigation: MenuScreenNavigationProp;
+  navigation: SavedScreenNavigationProp;
 }
 
-// Menu
-export default function Menu({ navigation }: Props): JSX.Element
+// Saved
+export default function Saved({ navigation }: Props): JSX.Element
 {
+  const saved: Dhikr[] = [];
+
   // Dhikr Mapper
   function dhikrMapper(x: Dhikr): JSX.Element
   {
@@ -39,10 +41,10 @@ export default function Menu({ navigation }: Props): JSX.Element
           />
 
           <Text style={ styles.heading }>
-            Select a Dhikr
+            Select Your Dhikr
           </Text>
 
-          { dhikrs.map(dhikrMapper) }
+          { saved.map(dhikrMapper) }
         </View>
       </ScrollView>
     </>

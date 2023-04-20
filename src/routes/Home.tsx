@@ -1,13 +1,17 @@
 import { View, Image, Text, Pressable, StyleSheet } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 // ...
 import { logo, links } from "../lib/Images";
+import { type HomeScreenNavigationProp } from "../lib/Interface";
+
+// Props
+interface Props
+{
+  navigation: HomeScreenNavigationProp;
+}
 
 // Home
-export default function Home(): JSX.Element
+export default function Home({ navigation }: Props): JSX.Element
 {
-  const navigation = useNavigation();
-
   return (
     <>
       <View style={ styles.container }>
@@ -20,14 +24,14 @@ export default function Home(): JSX.Element
           Tasbih Counter
         </Text>
 
-        <Pressable onPress={ () => navigation.navigate("Rosary" as never) }>
+        <Pressable onPress={ () => navigation.navigate("Saved") }>
           <Image
             source={ links[ 1 ] }
             style={ styles.dhikrImg }
           />
         </Pressable>
 
-        <Pressable onPress={ () => navigation.navigate("Menu" as never) }>
+        <Pressable onPress={ () => navigation.navigate("Menu") }>
           <Image
             source={ links[ 0 ] }
             style={ styles.tasbihImg }

@@ -1,13 +1,16 @@
 import { Image, Text, Pressable, StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 // ...
-import { type Dhikr } from "./Images";
+import { type Dhikr } from "./Interface";
 
 // Dhikr Link
 export default function DhikrLink({ name, src }: Dhikr): JSX.Element
 {
+  const navigation = useNavigation();
+
   return (
     <>
-      <Pressable style={ styles.btn }>
+      <Pressable onPress={ () => navigation.navigate("Rosary" as never, { name: name } as never) } style={ styles.btn }>
         <Text style={ styles.btnTxt }>
           { name }
         </Text>

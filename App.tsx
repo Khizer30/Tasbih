@@ -7,12 +7,14 @@ import { createStackNavigator } from "@react-navigation/stack";
 // ...
 import Home from "./src/routes/Home";
 import Menu from "./src/routes/Menu";
+import Saved from "./src/routes/Saved";
 import Rosary from "./src/routes/Rosary";
+import type { RootStackParamList } from "./src/lib/Interface";
 
 // App
 export default function App(): JSX.Element
 {
-  const Stack = createStackNavigator();
+  const Stack = createStackNavigator<RootStackParamList>();
   const [ fontsLoaded, setFontsLoaded ] = useState<boolean>(false);
 
   // On Mount
@@ -42,7 +44,8 @@ export default function App(): JSX.Element
           <Stack.Navigator initialRouteName="Home" detachInactiveScreens screenOptions={ { headerShown: false } }>
             <Stack.Screen name="Home" component={ Home } />
             <Stack.Screen name="Menu" component={ Menu } />
-            <Stack.Screen name="Rosary" component={ Rosary } />
+            <Stack.Screen name="Saved" component={ Saved } />
+            <Stack.Screen name="Rosary" component={ Rosary } initialParams={ { name: "" } } />
           </Stack.Navigator>
         </NavigationContainer>
       }
