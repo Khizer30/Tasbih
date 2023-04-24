@@ -1,5 +1,6 @@
-import { View, Image, Text, Pressable, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet } from "react-native";
 // ...
+import Button from "../lib/Button";
 import { logo, links } from "../lib/Images";
 import { type HomeScreenNavigationProp } from "../lib/Interface";
 
@@ -24,19 +25,19 @@ export default function Home({ navigation }: Props): JSX.Element
           Tasbih Counter
         </Text>
 
-        <Pressable onPress={ () => navigation.navigate("Saved") }>
+        <Button callPress={ () => navigation.navigate("Saved") } style={ {} }>
           <Image
             source={ links[ 1 ] }
             style={ styles.dhikrImg }
           />
-        </Pressable>
+        </Button>
 
-        <Pressable onPress={ () => navigation.navigate("Menu") }>
+        <Button callPress={ () => navigation.navigate("Menu") } style={ {} }>
           <Image
             source={ links[ 0 ] }
             style={ styles.tasbihImg }
           />
-        </Pressable>
+        </Button>
       </View>
     </>
   );

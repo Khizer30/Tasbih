@@ -1,8 +1,8 @@
 import { ScrollView, View, Image, Text, Pressable, StyleSheet } from "react-native";
 // ...
-import { logo, back, type Dhikr } from "../lib/Images";
 import DhikrLink from "../lib/DhikrLink";
-import { type SavedScreenNavigationProp } from "../lib/Interface";
+import { logo, back } from "../lib/Images";
+import { type Dhikr, type SavedScreenNavigationProp } from "../lib/Interface";
 
 // Props
 interface Props

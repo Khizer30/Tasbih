@@ -3,6 +3,8 @@ import { type ImageSourcePropType } from "react-native";
 import { type Dhikr } from "./Interface";
 import logoImg from "../../assets/logo.png";
 import backImg from "../../assets/back.png";
+import resetImg from "../../assets/reset.png";
+import saveImg from "../../assets/save.png";
 import menuLink from "../../assets/menu-link.png";
 import rosaryLink from "../../assets/rosary-link.png";
 import alhamdulillah from "../../assets/alhamdulillah.png";
@@ -15,6 +17,8 @@ import subhanallah from "../../assets/subhanallah.png";
 // Export
 export const logo: ImageSourcePropType = logoImg;
 export const back: ImageSourcePropType = backImg;
+export const reset: ImageSourcePropType = resetImg;
+export const save: ImageSourcePropType = saveImg;
 export const links: ImageSourcePropType[] = [ menuLink, rosaryLink ];
 export const dhikrs: Dhikr[] =
   [

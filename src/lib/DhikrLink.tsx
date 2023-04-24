@@ -1,6 +1,7 @@
 import { Image, Text, Pressable, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 // ...
+import Button from "./Button";
 import { type Dhikr } from "./Interface";
 
 // Dhikr Link
@@ -10,16 +11,18 @@ export default function DhikrLink({ name, src }: Dhikr): JSX.Element
 
   return (
     <>
-      <Pressable onPress={ () => navigation.navigate("Rosary" as never, { name: name } as never) } style={ styles.btn }>
-        <Text style={ styles.btnTxt }>
-          { name }
-        </Text>
+      <Button callPress={ () => navigation.navigate("Rosary" as never, { name: name } as never) } style={ styles.btn }>
+        <>
+          <Text style={ styles.btnTxt }>
+            { name }
+          </Text>
 
-        <Image
-          source={ src }
-          style={ styles.btnImg }
-        />
-      </Pressable>
+          <Image
+            source={ src }
+            style={ styles.btnImg }
+          />
+        </>
+      </Button>
     </>
   );
 }
