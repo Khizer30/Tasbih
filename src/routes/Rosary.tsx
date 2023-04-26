@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { View, Image, Text, Pressable, StyleSheet, type GestureResponderEvent } from "react-native";
 // ...
 import Button from "../lib/Button";
+import { updateCounter, readCounter } from "../lib/db";
 import { back, reset, save, dhikrs } from "../lib/Images";
 import { type Dhikr, type RosaryScreenNavigationProp, type RosaryScreenRouteProp } from "../lib/Interface";
 
@@ -19,10 +20,22 @@ export default function Rosary({ navigation, route }: Props): JSX.Element
   const dhikr: Dhikr | undefined = dhikrs.find((x: Dhikr) => x.name === name);
   const [ count, setCount ] = useState<number>(0);
 
+  // On Mount
+  useEffect(() =>
+  {
+    setCounter();
+  }, []);
+
   // Save Counter
   async function saveCounter(): Promise<void>
   {
+    await updateCounter(name, count);
+  }
 
+  // Set Counter
+  async function setCounter(): Promise<void>
+  {
+    setCount(await readCounter(name));
   }
 
   // Reset Counter
