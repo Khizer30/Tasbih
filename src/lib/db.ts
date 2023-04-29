@@ -1,4 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+// ...
+import { dhikrs } from "./Images";
+import { type Dhikr } from "./Interface";
 
 // Update Counter
 async function updateCounter(name: string, count: number): Promise<void>
@@ -35,5 +38,24 @@ async function readCounter(name: string): Promise<number>
   return num;
 }
 
+// Get Saved
+async function getSaved(): Promise<Dhikr[]>
+{
+  let saved: Dhikr[] = [];
+
+  try
+  {
+    const keys: readonly string[] = await AsyncStorage.getAllKeys();
+
+    saved = dhikrs.filter((x: Dhikr) => keys.includes(x.name));
+  }
+  catch (err: unknown)
+  {
+    console.log(err);
+  }
+
+  return saved;
+}
+
 // Export
-export { updateCounter, readCounter };
+export { updateCounter, readCounter, getSaved };

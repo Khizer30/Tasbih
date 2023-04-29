@@ -13,7 +13,11 @@ type RootStackParamList =
     Home: undefined;
     Menu: undefined;
     Saved: undefined;
-    Rosary: { name: string; };
+    Rosary:
+    {
+      name: string;
+      old: boolean;
+    };
   };
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, "Home">;

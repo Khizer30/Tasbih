@@ -45,7 +45,7 @@ export default function App(): JSX.Element
             <Stack.Screen name="Home" component={ Home } />
             <Stack.Screen name="Menu" component={ Menu } />
             <Stack.Screen name="Saved" component={ Saved } />
-            <Stack.Screen name="Rosary" component={ Rosary } initialParams={ { name: "" } } />
+            <Stack.Screen name="Rosary" component={ Rosary } initialParams={ { name: "", old: false } } />
           </Stack.Navigator>
         </NavigationContainer>
       }

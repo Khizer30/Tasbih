@@ -16,14 +16,17 @@ interface Props
 // Rosary
 export default function Rosary({ navigation, route }: Props): JSX.Element
 {
-  const { name } = route.params;
+  const { name, old } = route.params;
   const dhikr: Dhikr | undefined = dhikrs.find((x: Dhikr) => x.name === name);
   const [ count, setCount ] = useState<number>(0);
 
   // On Mount
   useEffect(() =>
   {
-    setCounter();
+    if (old)
+    {
+      setCounter();
+    }
   }, []);
 
   // Save Counter

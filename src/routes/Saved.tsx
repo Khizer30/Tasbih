@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import { ScrollView, View, Image, Text, Pressable, StyleSheet } from "react-native";
 // ...
 import DhikrLink from "../lib/DhikrLink";
+import { getSaved } from "../lib/db";
 import { logo, back } from "../lib/Images";
 import { type Dhikr, type SavedScreenNavigationProp } from "../lib/Interface";
 
@@ -13,13 +15,25 @@ interface Props
 // Saved
 export default function Saved({ navigation }: Props): JSX.Element
 {
-  const saved: Dhikr[] = [];
+  const [ saved, setSaved ] = useState<Dhikr[]>([]);
+
+  // On Mount
+  useEffect(() =>
+  {
+    setUp();
+  }, []);
+
+  // Set Up
+  async function setUp(): Promise<void>
+  {
+    setSaved(await getSaved());
+  }
 
   // Dhikr Mapper
   function dhikrMapper(x: Dhikr): JSX.Element
   {
     return (
-      <DhikrLink key={ x.name } name={ x.name } src={ x.src } />
+      <DhikrLink key={ x.name } name={ x.name } src={ x.src } old={ true } />
     );
   }
 

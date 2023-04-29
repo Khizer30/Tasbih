@@ -17,7 +17,7 @@ export default function Menu({ navigation }: Props): JSX.Element
   function dhikrMapper(x: Dhikr): JSX.Element
   {
     return (
-      <DhikrLink key={ x.name } name={ x.name } src={ x.src } />
+      <DhikrLink key={ x.name } name={ x.name } src={ x.src } old={ false } />
     );
   }
 

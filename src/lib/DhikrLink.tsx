@@ -1,17 +1,24 @@
-import { Image, Text, Pressable, StyleSheet } from "react-native";
+import { Image, Text, StyleSheet, type ImageSourcePropType } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 // ...
 import Button from "./Button";
-import { type Dhikr } from "./Interface";
+
+// Props
+interface Props
+{
+  name: string;
+  src: ImageSourcePropType;
+  old: boolean;
+}
 
 // Dhikr Link
-export default function DhikrLink({ name, src }: Dhikr): JSX.Element
+export default function DhikrLink({ name, src, old }: Props): JSX.Element
 {
   const navigation = useNavigation();
 
   return (
     <>
-      <Button callPress={ () => navigation.navigate("Rosary" as never, { name: name } as never) } style={ styles.btn }>
+      <Button callPress={ () => navigation.navigate("Rosary" as never, { name: name, old: old } as never) } style={ styles.btn }>
         <>
           <Text style={ styles.btnTxt }>
             { name }
