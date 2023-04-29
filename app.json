@@ -2,8 +2,9 @@
   "expo":
   {
     "name": "Tasbih",
-    "slug": "Tasbih",
+    "slug": "tasbih",
     "version": "1.0.0",
+    "owner": "khizer30",
     "orientation": "portrait",
     "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
@@ -23,6 +24,13 @@
       {
         "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#006400"
+      }
+    },
+    "extra":
+    {
+      "eas":
+      {
+        "projectId": "8621a443-d614-4f7d-8a86-15d4c236194a"
       }
     }
   }
