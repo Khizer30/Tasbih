@@ -12,10 +12,10 @@ interface Props
 // Button
 export default function Button({ children, callPress, style }: Props): JSX.Element
 {
-  const [ scaleValue ] = useState<Animated.Value>(new Animated.Value(1));
+  const [scaleValue] = useState<Animated.Value>(new Animated.Value(1));
 
   // Animated Value
-  const animatedStyle = { transform: [ { scale: scaleValue } ] };
+  const animatedStyle = { transform: [{ scale: scaleValue }] };
 
   // Handle Press In
   function handlePressIn(): void
@@ -31,7 +31,7 @@ export default function Button({ children, callPress, style }: Props): JSX.Eleme
 
   return (
     <TouchableWithoutFeedback onPress={ callPress } onPressIn={ handlePressIn } onPressOut={ handlePressOut }>
-      <Animated.View style={ [ style, animatedStyle ] }>
+      <Animated.View style={ [style, animatedStyle] }>
         { children }
       </Animated.View>
     </TouchableWithoutFeedback>

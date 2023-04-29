@@ -15,7 +15,7 @@ import type { RootStackParamList } from "./src/lib/Interface";
 export default function App(): JSX.Element
 {
   const Stack = createStackNavigator<RootStackParamList>();
-  const [ fontsLoaded, setFontsLoaded ] = useState<boolean>(false);
+  const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
 
   // On Mount
   useEffect(() =>

@@ -18,7 +18,7 @@ export default function Rosary({ navigation, route }: Props): JSX.Element
 {
   const { name, old } = route.params;
   const dhikr: Dhikr | undefined = dhikrs.find((x: Dhikr) => x.name === name);
-  const [ count, setCount ] = useState<number>(0);
+  const [count, setCount] = useState<number>(0);
 
   // On Mount
   useEffect(() =>
@@ -72,7 +72,7 @@ export default function Rosary({ navigation, route }: Props): JSX.Element
         </View>
 
         <Image
-          source={ dhikr?.src || dhikrs[ 3 ].src }
+          source={ dhikr?.src || dhikrs[3].src }
           style={ styles.logo }
         />
 

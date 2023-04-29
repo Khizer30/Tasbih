@@ -27,14 +27,14 @@ export default function Home({ navigation }: Props): JSX.Element
 
         <Button callPress={ () => navigation.navigate("Saved") } style={ {} }>
           <Image
-            source={ links[ 1 ] }
+            source={ links[1] }
             style={ styles.dhikrImg }
           />
         </Button>
 
         <Button callPress={ () => navigation.navigate("Menu") } style={ {} }>
           <Image
-            source={ links[ 0 ] }
+            source={ links[0] }
             style={ styles.tasbihImg }
           />
         </Button>

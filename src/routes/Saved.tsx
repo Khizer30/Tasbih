@@ -15,7 +15,7 @@ interface Props
 // Saved
 export default function Saved({ navigation }: Props): JSX.Element
 {
-  const [ saved, setSaved ] = useState<Dhikr[]>([]);
+  const [saved, setSaved] = useState<Dhikr[]>([]);
 
   // On Mount
   useEffect(() =>

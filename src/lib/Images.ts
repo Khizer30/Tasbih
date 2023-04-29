@@ -19,7 +19,7 @@ export const logo: ImageSourcePropType = logoImg;
 export const back: ImageSourcePropType = backImg;
 export const reset: ImageSourcePropType = resetImg;
 export const save: ImageSourcePropType = saveImg;
-export const links: ImageSourcePropType[] = [ menuLink, rosaryLink ];
+export const links: ImageSourcePropType[] = [menuLink, rosaryLink];
 export const dhikrs: Dhikr[] =
   [
     {
