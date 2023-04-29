@@ -20,6 +20,7 @@
     ],
     "android":
     {
+      "package": "com.khizer30.tasbih",
       "adaptiveIcon":
       {
         "foregroundImage": "./assets/logo.png",
