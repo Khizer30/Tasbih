@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderRadius: 10,
     backgroundColor: "#006400",
-    marginTop: "3%"
+    marginTop: 60
   },
   counter:
   {
