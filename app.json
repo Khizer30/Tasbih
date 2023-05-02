@@ -12,7 +12,7 @@
     {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#FFFFCC"
+      "backgroundColor": "#F8F8FF"
     },
     "assetBundlePatterns":
     [
@@ -23,8 +23,8 @@
       "package": "com.khizer30.tasbih",
       "adaptiveIcon":
       {
-        "foregroundImage": "./assets/logo.png",
-        "backgroundColor": "#006400"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#F8F8FF"
       }
     },
     "extra":

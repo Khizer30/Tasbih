@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   {
     flexGrow: 1,
     flexDirection: "column",
-    backgroundColor: "#FFFFCC"
+    backgroundColor: "#F8F8FF"
   },
   view:
   {

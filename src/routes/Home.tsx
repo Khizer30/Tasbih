@@ -22,7 +22,7 @@ export default function Home({ navigation }: Props): JSX.Element
         />
 
         <Text style={ styles.heading }>
-          Tasbih Counter
+          Tasbih
         </Text>
 
         <Button callPress={ () => navigation.navigate("Saved") } style={ {} }>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#FFFFCC"
+    backgroundColor: "#F8F8FF"
   },
   logo:
   {

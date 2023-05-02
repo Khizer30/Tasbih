@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
-    backgroundColor: "#FFFFCC"
+    backgroundColor: "#F8F8FF"
   },
   header:
   {
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     fontFamily: "Epilogue-Medium",
     fontSize: 23,
-    color: "#FFFFCC",
+    color: "#F8F8FF",
     marginTop: -3
   },
   y2:
@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     fontFamily: "Epilogue-Medium",
     fontSize: 30,
-    color: "#FFFFCC",
+    color: "#F8F8FF",
     marginTop: -3
   },
   circle:
